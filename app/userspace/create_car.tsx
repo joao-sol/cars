@@ -55,6 +55,7 @@ export default function CreateCar() {
       />
 
       <Button title="Create Car" onPress={handleCreate} />
+
     </View>
   );
 }

@@ -1,0 +1,12 @@
+FROM alpine:3.20
+
+WORKDIR /app
+
+# copiar o binário do PocketBase (você precisa colocar o arquivo "pocketbase" nesta pasta)
+COPY pocketbase /app/pocketbase
+
+RUN mkdir -p /pb_data && chmod +x /app/pocketbase
+
+EXPOSE 8090
+
+CMD ["/app/pocketbase", "serve", "--http=0.0.0.0:8090", "--dir", "/pb_data"]
