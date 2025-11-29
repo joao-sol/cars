@@ -48,8 +48,7 @@ export default function Home() {
       setCars((prev) => prev.filter((car) => car.id !== id));
 
       setStatus(`Deleted car ${id}.`);
-      // Se quiser conferir com o backend:
-      // await loadCars();
+
     } catch (error: any) {
       const msg =
         error?.response?.data ??

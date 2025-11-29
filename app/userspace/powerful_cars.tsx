@@ -4,7 +4,7 @@ import { useRouter } from "expo-router";
 import api from "../../src/services/api";
 import { useTokenContext } from "../../src/contexts/userContext";
 import { Car } from "../../src/types/Car";
-import { PocketBaseListResult } from "../../src/types/PocketBaseListResult"; // ajuste o caminho se precisar
+import { PocketBaseListResult } from "../../src/types/PocketBaseListResult"; 
 
 export default function PowerfulCars() {
   const { token } = useTokenContext();

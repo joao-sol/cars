@@ -17,12 +17,12 @@ export default function EditCar() {
     id: string;
     brand?: string;
     model?: string;
-    hp?: string; // 👈 vem como string
+    hp?: string; //  vem como string
   }>();
 
   const [brand, setBrand] = useState(params.brand ?? "");
   const [model, setModel] = useState(params.model ?? "");
-  const [hp, setHp] = useState(params.hp ?? ""); // 👈 string para o TextInput
+  const [hp, setHp] = useState(params.hp ?? ""); //  string para o TextInput
 
   const handleSave = async () => {
     if (!params.id) {
@@ -43,7 +43,7 @@ export default function EditCar() {
         {
           brand,
           model,
-          hp: hpNumber, // 👈 envia como number pro PocketBase
+          hp: hpNumber, // envia como number pro PocketBase
         },
         {
           headers: {
@@ -56,8 +56,7 @@ export default function EditCar() {
         {
           text: "OK",
           onPress: () => {
-            // Se você já tinha colocado isso, mantém:
-            router.push("/userspace"); // ou router.back(), como preferir
+            router.push("/userspace"); 
           },
         },
       ]);
